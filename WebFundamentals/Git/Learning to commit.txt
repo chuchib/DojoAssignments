@@ -1,0 +1,101 @@
+
+C:\Users\Banu\Desktop>mkdir test
+
+C:\Users\Banu\Desktop>cd test
+
+C:\Users\Banu\Desktop\test>copy NULL index.html
+The system cannot find the file specified.
+
+C:\Users\Banu\Desktop\test>copy NUL index.html
+        1 file(s) copied.
+
+C:\Users\Banu\Desktop\test>copy NUL styles.css
+        1 file(s) copied.
+
+C:\Users\Banu\Desktop\test>copy NUL aboutMe.txt
+        1 file(s) copied.
+
+C:\Users\Banu\Desktop\test>dir
+ Volume in drive C is Acer
+ Volume Serial Number is 7C49-2C62
+
+ Directory of C:\Users\Banu\Desktop\test
+
+02/07/2017  02:39 PM    <DIR>          .
+02/07/2017  02:39 PM    <DIR>          ..
+02/07/2017  02:39 PM                 0 aboutMe.txt
+02/07/2017  02:39 PM                 0 index.html
+02/07/2017  02:39 PM                 0 styles.css
+               3 File(s)              0 bytes
+               2 Dir(s)  215,262,601,216 bytes free
+
+C:\Users\Banu\Desktop\test>git init
+Initialized empty Git repository in C:/Users/Banu/Desktop/test/.git/
+
+C:\Users\Banu\Desktop\test>git add aboutMe.txt index.html styles.css
+
+C:\Users\Banu\Desktop\test>git commit -m "new files"
+[master (root-commit) 69a6ae4] new files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+C:\Users\Banu\Desktop\test>atom aboutMe.txt
+
+C:\Users\Banu\Desktop\test>git add aboutMe.txt
+
+C:\Users\Banu\Desktop\test>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   aboutMe.txt
+
+
+C:\Users\Banu\Desktop\test>git commit -m "updated aboutMe"
+[master 5168923] updated aboutMe
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Banu\Desktop\test>atom aboutMe.txt
+
+C:\Users\Banu\Desktop\test>git add aboutMe.txt
+
+C:\Users\Banu\Desktop\test>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   aboutMe.txt
+
+
+C:\Users\Banu\Desktop\test>git commit -m "added fav movie in aboutMe"
+[master 4f90c55] added fav movie in aboutMe
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Banu\Desktop\test>git log
+commit 4f90c55c6716ce0019f83edaac595e5c0307e734
+Author: Banu <rai.bandhana21@gmail.com>
+Date:   Tue Feb 7 14:45:02 2017 -0500
+
+    added fav movie in aboutMe
+
+commit 51689234be421aef97e443021d93117a496d2fd7
+Author: Banu <rai.bandhana21@gmail.com>
+Date:   Tue Feb 7 14:43:04 2017 -0500
+
+    updated aboutMe
+
+commit 69a6ae44dc9c65d7ea3e8c790c8e58fbee5adb38
+Author: Banu <rai.bandhana21@gmail.com>
+Date:   Tue Feb 7 14:41:05 2017 -0500
+
+    new files
+
+C:\Users\Banu\Desktop\test>git revert -n 4f90c55
+
+C:\Users\Banu\Desktop\test>git commit -m "reverted"
+[master 677d5d6] reverted
+ 1 file changed, 1 deletion(-)
+
+C:\Users\Banu\Desktop\test>
